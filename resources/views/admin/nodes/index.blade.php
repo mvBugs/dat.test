@@ -31,7 +31,7 @@
                                 <th>Шаблон</th>
                                 --}}
                                 <th>Дата</th>
-                                <th>Язык</th>
+                                {{--<th>Язык</th>--}}
                                 <th style="width:100px;">Действия</th>
                             </tr>
                             </thead>
@@ -48,7 +48,7 @@
                                      <td>{{ $page->blade ?? 'По умолчанию' }}</td>
                                      --}}
                                     <td>{{ $page->created_at }}</td>
-                                    <td>{{ $page->locale }}</td>
+                                    {{--<td>{{ $page->locale }}</td>--}}
                                     <td style="width: 110px">
                                         <div class="btn-group">
                                             <a href="{{ route_alias('node.show', $page) }}" target="_blank" class="btn btn-xs btn-success"><i class="fa fa-eye"></i></a>

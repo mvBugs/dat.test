@@ -6,7 +6,8 @@
             </button>
             <div class="modal-body">
                 <div class="norms">
-                    <div class="norms__wrapper">
+                    {!! \BlockVisualEditor::render('modal', '
+                        <div class="norms__wrapper">
                         <div class="new-image">
                             <img src="img/metallic-image.png" alt="">
                             <div class="wood-content__right-text">
@@ -163,6 +164,8 @@
                             </div>
                         </div>
                     </div>
+                    ') !!}
+
                 </div>
             </div>
         </div>

@@ -18,7 +18,7 @@ class FormController extends Controller
     {
         $this->authorize("form.read");
 
-        $forms = Form::byType($request->type)->orderBy('created_at', 'desc')->paginate();
+        $forms = Form::byType('write')->orderBy('created_at', 'desc')->paginate();
 
         return view()->first(['admin.forms.'.$request->type, 'admin.forms.index'], compact('forms'));
     }
@@ -69,14 +69,7 @@ class FormController extends Controller
         $form = Form::findOrFail($id);
         $form->delete();
 
-        $form->terms()->attach();
-        $form->media()->each(function ($m) {
-            $m->delete();
-        });
-
-        $destination = $request->session()->pull('destination', route('admin.forms.index'));
-        return redirect()->route($destination)
-            ->with('success', trans('notifications.destroy.success'));
+        return redirect()->route('admin.forms.index', ['type' => 'write']);
     }
 
     /**

@@ -63,9 +63,9 @@ Route::group(['as' => 'admin.', 'prefix' => 'admin', 'namespace' => 'Admin', 'mi
  */
 Route::group(['namespace' => 'Front'], function () {
     //Route::get('pages/{page}', 'PageController@show');
-    Route::get('1', function () {
-        return view('fronts.pages.home');
-    });
+    Route::get('/sendmesssage', function () {
+        return view('fronts.pages.write-end');
+    })->name('write.end');
     Route::get('node/{node}', 'NodeController@show')->name('node.show');
     Route::post('form', 'FormController@store')->name('form.store');
     Route::get('/{locale?}', 'HomeController@index')->name('home')->middleware('applyUrlLocaleToRootPage');

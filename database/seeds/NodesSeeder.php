@@ -27,25 +27,25 @@ class NodesSeeder extends Seeder
             ['name' => 'Металлические барабаны для кабеля', 'type' => 'pages', 'data' => ['blade' => 'fronts.pages.metallic',   'fields' => ['body' => ''],], 'url_alias' => 'metallic',],
         ];
 
-        foreach (UrlAliasLocalization::getSupportedLanguagesKeys() as $key) {
+//        foreach (UrlAliasLocalization::getSupportedLanguagesKeys() as $key) {
             foreach ($dataNodes as $data) {
                 $node = \App\Models\Node::create([
                     'name' => $data['name'],
                     'type' => $data['type'],
                     'data' => $data['data'] ?? [],
-                    'locale' => $key,
+                    'locale' => 'ru'/*$key*/,
                 ]);
                 if (isset($data['url_alias'])) {
-                    $alias = $data['url_alias'] == 'HOME' ? $key : $data['url_alias'];
+                    $alias = $data['url_alias'] == 'HOME' ? 'ru'/*$key*/ : $data['url_alias'];
                     $node->urlAlias()->updateOrCreate([
                         'alias' => $alias,
-                        'locale' => $key,
+                        'locale' => 'ru'/*$key*/,
                     ], [
                         'source' => $node->generateUrlSource(),
                     ]);
                 }
 
-            }
+//            }
         }
     }
 }

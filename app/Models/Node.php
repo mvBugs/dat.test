@@ -8,6 +8,7 @@ use App\Models\Traits\HasMedia\HasMediaTrait;
 use App\Traits\UrlAliasGenerator;
 use Fomvasss\UrlAliases\Traits\UrlAliasable;
 use Illuminate\Database\Eloquent\Model;
+use Spatie\MediaLibrary\Models\Media;
 
 class Node extends Model implements HasMedia
 {
@@ -18,6 +19,25 @@ class Node extends Model implements HasMedia
     protected $casts = [
         'data' => 'array',
     ];
+
+    public $attributes = [
+        'type' => 'pages',
+        'locale' => 'ru',
+    ];
+
+    public function registerMediaConversions(Media $media = null)
+    {
+//        dd($this->holder_first()->system_name);
+
+        $this->addMediaConversion('thumb')
+            ->width(50)
+            ->height(50)
+            ->sharpen(10);
+
+        $this->addMediaConversion('gallery')
+            ->width(266.44)
+            ->height(266.44);
+    }
 
     public function previous()
     {

@@ -18,13 +18,13 @@
 
             <div class="box-tools pull-right">
 
-                <ul class="pagination pagination-sm inline">
+                {{--<ul class="pagination pagination-sm inline">
                     @foreach(UrlAliasLocalization::getLocalesOrder() as $key => $locale)
                     <li @if($key == $node->locale) class="active" @endif>
                         <a href="">{{ strtoupper($key)}}</a>
                     </li>
                     @endforeach
-                </ul>
+                </ul>--}}
 
                 &nbsp;
                 @include('admin.inc.entity-navigation', [

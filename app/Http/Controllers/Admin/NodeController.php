@@ -43,8 +43,25 @@ class NodeController extends Controller
      */
     public function store(Request $request)
     {
+
         $node = Node::create($request->only('name', 'publish'));
+
         $node->setAttribute('data', $request->get('data', []));
+
+        if (isset($request->file) && !empty($request->file)) {
+            $node->addMedia($request->file)->toMediaCollection('file');
+        }
+        if (isset($request->image) && !empty($request->image)) {
+            foreach ($request->image as $image) {
+                $node->addMedia($image)->toMediaCollection('image');
+            }
+        }
+
+        $node->urlAlias()->create([
+            'source' => $node->generateUrlSource(),
+            'alias' => $node->generateUrlAlias($request->alias),
+            'locale' => 'ru',
+        ]);
 
         $destination = $request->session()->pull('destination', route('admin.nodes.edit', $node));
         return redirect()->to($destination)
@@ -75,6 +92,28 @@ class NodeController extends Controller
     public function update(Request $request, $id)
     {
         $node = Node::findOrFail($id);
+
+        if (!empty($request->file_deleted)) {
+            $node->getMedia('file')->find($request->file_deleted)->delete();
+        }
+
+        if (!empty($request->image_deleted)) {
+            foreach ($request->image_deleted as $image) {
+                if (!empty($image)) {
+                    $node->getMedia('image')->find($image)->delete();
+                }
+            }
+        }
+
+        if (isset($request->file) && !empty($request->file)) {
+            $node->addMedia($request->file)->toMediaCollection('file');
+        }
+        if (isset($request->image) && !empty($request->image)) {
+            foreach ($request->image as $image) {
+                $node->addMedia($image)->toMediaCollection('image');
+            }
+        }
+
         $node->update($request->only('name', 'publish'));
         $node->setAttribute('data', $request->get('data', []));
         $node->save();
@@ -93,5 +132,21 @@ class NodeController extends Controller
     public function destroy($id)
     {
         //
+        $node = Node::find($id);
+        if (!empty($node->getMedia('image'))) {
+            foreach($node->getMedia('image')->all() as $img) {
+                $img->delete();
+            }
+        }
+
+        if (!empty($node->getMedia('file')->first())) {
+            $node->getMedia('file')->first()->delete();
+        }
+
+        $node->urlAlias()->delete();
+
+        $node->delete();
+
+        return redirect()->route('admin.nodes.index', ['type' => 'pages']);
     }
 }

@@ -6,7 +6,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta http-equiv="Cache-Control" content="no-cache">
-    <title>Document</title>
+    <title>{{ $title }}</title>
     <!-- Vendor styles plugins -->
     <!-- build:css css/plugins.css -->
     <link rel="stylesheet" href="its-client/vendor/reset-css/reset.css">

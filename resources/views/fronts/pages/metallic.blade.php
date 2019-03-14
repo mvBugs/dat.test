@@ -1,4 +1,4 @@
-@extends('fronts.layouts.app')
+@extends('fronts.layouts.app', ['title' => $node->name])
 
 @section('content')
     @include('fronts.layouts.inc.header')
@@ -6,7 +6,7 @@
         <div class="wood__wrapper">
             <div class="about about_norms">
                 <div class="about__wrapper">
-                    <h1 class="about__name big-name">Металлические барабаны для кабеля</h1>
+                    <h1 class="about__name big-name">{{ $node->name }}</h1>
                 </div>
             </div>
             <div class="wood-content">
@@ -17,6 +17,7 @@
                         <span>Скачать ГОСТ</span>
                     </a>
                 </div>
+                {!! \BlockVisualEditor::render('metallic-content', '
                 <div class="wood-content__wrapper">
                     <div class="wood-content__left_wrapper">
                         <div class="wood-content__left">
@@ -102,11 +103,13 @@
                         </div>
                     </div>
                 </div>
+                ') !!}
             </div>
             <div class="about about_advantages">
                 <div class="about__wrapper">
                     <h1 class="about__name big-name">Преимущества</h1>
-                    <div class="advantages">{!! \BlockVisualEditor::render('advantages-block-metallic', '
+                    <div class="advantages">
+                        {!! \BlockVisualEditor::render('advantages-block-metallic', '
                         <div class="advantages__wrapper">
                             <div class="advantages__block my-animate fadeInUp" data-duration="2" data-delay="1">
                                 <div class="advantages__img">
@@ -138,8 +141,6 @@
                             </div>
                         </div>
                     ') !!}
-
-
                     </div>
                 </div>
             </div>

@@ -15,13 +15,13 @@
             <i class="ion ion-clipboard"></i>
             <h3 class="box-title"> Создание материала</h3>
 
-            <div class="box-tools pull-right">
+            {{--<div class="box-tools pull-right">
                 <ul class="pagination pagination-sm inline">
                     @foreach(UrlAliasLocalization::getLocalesOrder() as $key => $locale)
                         <li @if($key == request('locale', 'en')) class="active" @endif><a href="#">{{ strtoupper($key)}}</a></li>
                     @endforeach
                 </ul>
-            </div>
+            </div>--}}
 
         </div>
         <div class="box-body">
@@ -34,6 +34,7 @@
                     @endforeach
                     {{--<li class="pull-right"><a href="#" class="text-muted"><i class="fa fa-gear"></i></a></li>--}}
                 </ul>
+
                 <div class="tab-content">
                     <div class="tab-pane active" id="tab_1">
                         <br>
@@ -42,9 +43,11 @@
                              'files' => true
                         ]) !!}
                         @include('admin.nodes._form')
+
                         {!! Form::close() !!}
                     </div>
                 </div>
+
             </div>
         </div>
 

@@ -6,6 +6,7 @@ use App\Http\Requests\Front\FormsRequest;
 use App\Http\Traits\MediaLibraryManageTrait;
 use App\Models\Form;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 
 class FormController extends Controller
 {
@@ -18,13 +19,13 @@ class FormController extends Controller
      */
     public function store(FormsRequest $request)
     {
-        $form = Form::create(array_merge($this->getVisitorInfo($request), [
-            'type' => $request->get('type'),
+        $form = Form::create([
+            'type' => 'write',
             'locale' => $request->get('locale') ?? 'en', // TODO,
             'data' => $request->validated(),
-        ]));
+        ]);
 
-        if ($request->has('terms')) {
+        /*if ($request->has('terms')) {
             $form->terms()->sync(array_values_recursive($request->terms));
         }
 
@@ -41,10 +42,9 @@ class FormController extends Controller
                 //'message' => trans('notifications.store.success'),
                 //'html' => '<p>example</p>',
             ]);
-        }
+        }*/
 
-        return redirect()->to($destination)
-            ->with('success', trans('notifications.store.success'));
+        return redirect()->route('write.end');
     }
 
     /**
