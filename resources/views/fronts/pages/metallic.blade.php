@@ -11,8 +11,8 @@
             </div>
             <div class="wood-content">
                 <div class="wood-content__button">
-                    <a href="#">
-                        <svg class="icon-svg icon-svg-download "><use xlink:href="/its-client/img//sprite.svg#download"></use></svg>
+                    <a href="@if(!empty($node->getFirstMedia('file'))) {{ $node->getFirstMediaUrl('file') }} @endif">
+                        <svg class="icon-svg icon-svg-download "><use xlink:href="/its-client/img/sprite.svg#download"></use></svg>
                         <span class="line"></span>
                         <span>Скачать ГОСТ</span>
                     </a>
@@ -154,19 +154,19 @@
                                <div class="contacts__left my-animate fadeInLeft" data-duration="2" data-delay="1">
                                    <span class="line"></span>
                                    <p>
-                                       <svg class="icon-svg icon-svg-contacts-location "><use xlink:href="./img/sprite.svg#contacts-location"></use></svg>
+                                       <svg class="icon-svg icon-svg-contacts-location "><use xlink:href="/its-client/img/sprite.svg#contacts-location"></use></svg>
                                        Казань, ул. Адоратского д. 50 а, оф. 112
                                    </p>
                                    <p>
-                                       <svg class="icon-svg icon-svg-contacts-phone "><use xlink:href="./img/sprite.svg#contacts-phone"></use></svg>
+                                       <svg class="icon-svg icon-svg-contacts-phone "><use xlink:href="/its-client/img/sprite.svg#contacts-phone"></use></svg>
                                        (843) 239-02-81
                                    </p>
                                    <p>
-                                       <svg class="icon-svg icon-svg-contacts-mail "><use xlink:href="./img/sprite.svg#contacts-mail"></use></svg>
+                                       <svg class="icon-svg icon-svg-contacts-mail "><use xlink:href="/its-client/img/sprite.svg#contacts-mail"></use></svg>
                                        info@bazza.su
                                    </p>
                                    <p>
-                                       <svg class="icon-svg icon-svg-contacts-day "><use xlink:href="./img/sprite.svg#contacts-day"></use></svg>
+                                       <svg class="icon-svg icon-svg-contacts-day "><use xlink:href="/its-client/img/sprite.svg#contacts-day"></use></svg>
                                        пн-птн , с 9:00 до 18:00
                                    </p>
                                </div>

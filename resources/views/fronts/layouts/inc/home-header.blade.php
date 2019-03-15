@@ -24,7 +24,7 @@
                     <nav>
                         <ul>
                             {!! \BlockVisualEditor::render('menu', '
-                            <li><a href="/home" class="active">Главная</a></li>
+                            <li><a href="/" class="active">Главная</a></li>
                             <li><a href="/wood">
                                     Кабельные
                                     барабаны

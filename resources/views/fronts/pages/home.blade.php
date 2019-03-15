@@ -1,4 +1,4 @@
-@extends('fronts.layouts.app', ['title' => $node->name])
+@extends('fronts.layouts.app', ['title' => 'Главная'])
 
 @section('content')
     @include('fronts.layouts.inc.home-header')
@@ -15,13 +15,13 @@
                             <p class="text-bottom">
                                 Wooden drums for electrical <br> cables and wires
                             </p>
-                            <a href="#">Подробнее</a>
+                            <a href="/wood">Подробнее</a>
                         </div>
                     ') !!}
                     {!! \BlockVisualEditor::render('home_one_submit', '
                         <div class="home__section-right anim fadeInRight animated delay-0.5s" data-effect="fadeInRight">
                         <p>С нами надежно, как с АК-47. <br> т.к. мы просто хорошо делаем свою работу.</p>
-                        <a href="#">Отправить заявку</a>
+                        <a href="/write">Отправить заявку</a>
                         </div>
                     ') !!}
                 </div>
@@ -37,14 +37,14 @@
                             <p class="text-bottom">
                                 Wooden drums for wire ropes
                             </p>
-                            <a href="#">Подробнее</a>
+                            <a href="/cable">Подробнее</a>
                         </div>
                     ') !!}
 
                     {!! \BlockVisualEditor::render('home_two_submit', '
                         <div class="home__section-right anim none delay-0.7s" data-effect="fadeInRight">
                             <p>С нами надежно, как с АК-47. <br> т.к. мы просто хорошо делаем свою работу.</p>
-                            <a href="#">Отправить заявку</a>
+                            <a href="/write">Отправить заявку</a>
                         </div>
                     ') !!}
 
@@ -61,14 +61,14 @@
                             <p class="text-bottom">
                                 Metal Drums for electrical cables and wires
                             </p>
-                            <a href="#">Подробнее</a>
+                            <a href="/metallic">Подробнее</a>
                         </div>
                     ') !!}
 
                     {!! \BlockVisualEditor::render('home_three_submit', '
                         <div class="home__section-right anim none " data-effect="fadeInRight">
                               <p>С нами надежно, как с АК-47. <br> т.к. мы просто хорошо делаем свою работу.</p>
-                              <a href="#">Отправить заявку</a>
+                              <a href="/write">Отправить заявку</a>
                           </div>
                     ') !!}
 

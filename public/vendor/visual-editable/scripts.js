@@ -2,18 +2,14 @@
 
     'use strict';
 
-    var d = $(document),
-        b = d.find('body'),
-        w = $(window),
-        L = window.Laravel,
-        csrf = $('meta[name="csrf-token"]').attr('content'),
-        $ckeBlocks = $('.editable-block')
-
     $.ajaxSetup({
         headers: {
-            'X-CSRF-TOKEN': csrf
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         }
     });
+
+    var $ckeBlocks = $('.editable-block')
+    $("#cke-panel").show()
 
     CKEDITOR.disableAutoInline = true;
     CKEDITOR.config.allowedContent = true;
@@ -26,30 +22,26 @@
     CKEDITOR.dtd.$removeEmpty['span'] = 0;
     CKEDITOR.dtd.$removeEmpty['i'] = 0;
     CKEDITOR.dtd.$removeEmpty['p'] = 0;
-    CKEDITOR.config.extraPlugins = 'fontawesome';
 
-    CKEDITOR.config.extraPlugins = 'btgrid,youtube,showblocks,tableresize,copycopy';
+    CKEDITOR.config.extraPlugins = 'fontawesome,btgrid,youtube,showblocks,tableresize,copycopy';
     CKEDITOR.config.removeButtons = 'Subscript,Superscript,Paste,PasteText,PasteFromWord,Copy,Cut,Scayt,HorizontalRule,About';
 
-    $("#cke-panel").show()
-
-    // цепляем редактор на блоки с классом .cke-block
+    // Set CKE for css class $ckeBlocks - "cke-block"
     $.each($ckeBlocks, function (key) {
         var $this = $(this);
         $this.attr('contenteditable', "true")
-        // if ($this.data('block-url-edit')) {
-        //     $this.after("&nbsp;<div class='cke-edit-btn'><a href='"+$this.data('block-url-edit')+"' target='_blank'>&#10050;</a></div>&nbsp;")
-        // }
+
+        // Add LFM to CKE
         this.editor = CKEDITOR.inline(this, {
             //toolbar : 'Inline',
             filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
-            filebrowserImageUploadUrl: '/laravel-filemanager/upload?type=Images&_token='+csrf,
+            filebrowserImageUploadUrl: '/laravel-filemanager/upload?type=Images&_token=',
             filebrowserBrowseUrl: '/laravel-filemanager?type=Files',
-            filebrowserUploadUrl: '/laravel-filemanager/upload?type=Files&_token='+csrf
+            filebrowserUploadUrl: '/laravel-filemanager/upload?type=Files&_token='
         })
     })
 
-    // сохранить все блоки страницы
+    // Find and save all blocks on page.
     $('.js-editable-blocks-save').on('click', function(e) {
         e.preventDefault()
         var $this = $(this),
@@ -70,10 +62,10 @@
             data: {"blocks": dataBlocks, "locale": locale},
             cache: false,
             success: function (result) {
-                alert('Успешно сохранено!')
+                alert('Success save! :)')
             },
             error: function (result) {
-                alert('Ошибка сохранения! Попробуйте повторить.')
+                alert('Error save! :(')
             }
         })
     })
@@ -83,6 +75,53 @@
     })
     $('#cke-panel').on('click', function () {
         $('.js-editable-blocks-save').removeClass("disabled")
+    })
+
+    // TODO
+     $('.editable-store-btn').on('click', function(e) {
+        e.preventDefault()
+        var $this = $(this),
+            url = $this.data('url-editable-store'),
+            block = $(this).prev('.editable-block'),
+            locale = block.data('locale'),
+            content = block.html()
+
+        $.ajax({
+            url: url,
+            method: 'POST',
+            dataType: 'json',
+            data: {"content": content, "locale": locale},
+            cache: false,
+            success: function (result) {
+                alert('Success save! :)')
+            },
+            error: function (result) {
+                alert('Error save! :(')
+            }
+        })
+    })
+    // TODO
+    $('.editable-update-btn').on('click', function(e) {
+        e.preventDefault()
+        var $this = $(this),
+            url = $this.data('url-editable-update'),
+            block = $(this).prev('.editable-block'),
+            locale = block.data('locale'),
+            content = block.html()
+
+        $.ajax({
+            url: url,
+            method: 'PATCH',
+            dataType: 'json',
+            data: {"content": content, "locale": locale},
+            cache: false,
+            success: function (result) {
+                alert('Success save! :)')
+            },
+            error: function (result) {
+                alert('Error save! :(')
+            }
+        })
     })
 
 })(jQuery)

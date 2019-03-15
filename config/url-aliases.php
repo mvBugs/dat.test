@@ -12,7 +12,7 @@ return [
      |  Support localized aliases and redirects.
      | -----------------------------------------------------------------
      */
-    'use_localization' => false,
+    'use_localization' => true,
 
     /* -----------------------------------------------------------------
      |  If visit systep path.

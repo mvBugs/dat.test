@@ -16,7 +16,7 @@
         "fomvasss/laravel-taxonomy": "^3.0",
         "fomvasss/laravel-url-aliases": "^2.0",
         "fomvasss/laravel-variables": "^2.1",
-        "fomvasss/laravel-visual-editable": "dev-master",
+        "fomvasss/laravel-visual-editable": "^0.0.1",
         "kyslik/column-sortable": "^5.7",
         "laravel/framework": "5.7.*",
         "laravel/tinker": "^1.0",
@@ -77,14 +77,5 @@
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
         ]
-    },
-    "repositories": [
-        {
-            "type": "path",
-            "url": "../../packages/*/*",
-            "options": {
-                "symlink": true
-            }
-        }
-    ]
+    }
 }

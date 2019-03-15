@@ -14,7 +14,7 @@ class NodesSeeder extends Seeder
         //\DB::table('nodes')->delete();
 
         $dataNodes = [
-            ['name' => 'Главная',                           'type' => 'pages', 'data' => ['blade' => 'fronts.pages.home',       'fields' => ['body' => ''],], 'url_alias' => 'home',],
+            ['name' => 'Главная',                           'type' => 'pages', 'data' => ['blade' => 'fronts.pages.home',       'fields' => ['body' => ''],], 'url_alias' => 'ru',],
             ['name' => 'О компании',                        'type' => 'pages', 'data' => ['blade' => 'fronts.pages.about',      'fields' => ['body' => ''],], 'url_alias' => 'about',],
             ['name' => 'Доставка',                          'type' => 'pages', 'data' => ['blade' => 'fronts.pages.delivery',   'fields' => ['body' => ''],], 'url_alias' => 'delivery',],
             ['name' => 'Преиущиства',                       'type' => 'pages', 'data' => ['blade' => 'fronts.pages.advantages', 'fields' => ['body' => ''],], 'url_alias' => 'advantages',],

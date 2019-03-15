@@ -94,6 +94,8 @@ class BlockController extends Controller
     public function destroy($id)
     {
         //...
+        Block::findOrFail($id)->delete();
+        return redirect()->route('admin.blocks.index');
     }
 
     public function visualSave(Request $request)

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
+use Fomvasss\UrlAliases\Models\UrlAlias;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -12,8 +13,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $locale = \UrlAliasLocalization::getCurrentLocale();
-
-        return view()->first(['front.pages.home-'.$locale, 'front.pages.home']);
+        return view()->first(['fronts.pages.home']);
     }
 }

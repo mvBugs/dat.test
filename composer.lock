@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "eefffbdf7f5422a469d195453045509b",
+    "content-hash": "0d5d14a0345a0986abb5ebbbe5e81236",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -728,11 +728,17 @@
         },
         {
             "name": "fomvasss/laravel-visual-editable",
-            "version": "dev-master",
+            "version": "0.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fomvasss/laravel-visual-editable.git",
+                "reference": "cf4fb131b4cf4e48d6eea8cda0cf45a8ca5488e9"
+            },
             "dist": {
-                "type": "path",
-                "url": "../../packages/fomvasss/laravel-visual-editable",
-                "reference": "e52ca8123d84a38f655b75a8962be2482273b180"
+                "type": "zip",
+                "url": "https://api.github.com/repos/fomvasss/laravel-visual-editable/zipball/cf4fb131b4cf4e48d6eea8cda0cf45a8ca5488e9",
+                "reference": "cf4fb131b4cf4e48d6eea8cda0cf45a8ca5488e9",
+                "shasum": ""
             },
             "require": {
                 "illuminate/database": "5.6.*|5.7.*",
@@ -757,6 +763,7 @@
                     "Fomvasss\\LaravelVisualEditable\\": "src"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -775,9 +782,7 @@
                 "laravel",
                 "visual"
             ],
-            "transport-options": {
-                "symlink": true
-            }
+            "time": "2019-03-14T21:50:48+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -7008,7 +7013,6 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "fomvasss/laravel-visual-editable": 20,
         "waavi/sanitizer": 20
     },
     "prefer-stable": true,
