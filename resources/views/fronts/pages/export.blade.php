@@ -57,5 +57,5 @@
 </div>
 </div>
 </div>
-@include('fronts.layouts.inc.footer')
+    @include('fronts.layouts.inc.footer-inner')
 @endsection

@@ -393,5 +393,5 @@
             icon: 'img/marker.svg'
         })
     </script>
-    @include('fronts.layouts.inc.footer')
+    @include('fronts.layouts.inc.footer-inner')
 @endsection

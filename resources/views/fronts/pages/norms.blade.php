@@ -2,4 +2,5 @@
 
 @section('content')
     @include('fronts.layouts.inc.header')
+    @include('fronts.layouts.inc.footer-inner')
 @endsection

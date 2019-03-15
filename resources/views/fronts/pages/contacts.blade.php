@@ -248,5 +248,5 @@ position: {lat: 55.847109, lng: 49.153111},
 icon: 'img/marker.svg'
 })
 </script>
-@include('fronts.layouts.inc.footer')
+    @include('fronts.layouts.inc.footer-inner')
 @endsection

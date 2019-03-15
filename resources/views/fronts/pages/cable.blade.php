@@ -371,7 +371,7 @@
             icon: '/its-client/img/marker.svg'
         })
     </script>
-    @include('fronts.layouts.inc.footer')
+    @include('fronts.layouts.inc.footer-inner')
     <div class="modal fade" id="table-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
