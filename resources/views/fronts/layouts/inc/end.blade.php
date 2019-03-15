@@ -1,5 +1,6 @@
 <!-- Vendor scripts plugins -->
 <!-- build:js js/plugins.js -->
+
 <script src="/its-client/vendor/jquery/dist/jquery.js"></script>
 <script src="/its-client/vendor/svg4everybody/dist/svg4everybody.min.js"></script>
 <script src="/its-client/vendor/fullpage.js/dist/fullpage.min.js"></script>
@@ -11,6 +12,7 @@
 <!-- endbuild -->
 <!-- Scripts application -->
 <script src="/its-client/js/script.js" inline></script>
+<script src="/js/common.js"></script>
 </div>
 @if(!config('visual-editable.available'))
     <script>

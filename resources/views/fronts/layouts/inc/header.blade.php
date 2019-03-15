@@ -22,7 +22,7 @@
                     <nav>
                         <ul>
                             {!! \BlockVisualEditor::render('menu', '
-                            <li><a href="/" class="active">Главная</a></li>
+                            <li><a href="/">Главная</a></li>
                             <li><a href="/wood">
                                     Кабельные
                                     барабаны
@@ -41,8 +41,10 @@
 
                         </ul>
                     </nav>
+
                 </div>
             </div>
         </div>
     </div>
 </header>
+
