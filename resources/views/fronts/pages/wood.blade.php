@@ -1465,7 +1465,7 @@
                         {!! \BlockVisualEditor::render('modal_wood', '
                             <div class="norms__wrapper">
                             <div class="new-image">
-                                <img src="img/metallic-image.png" alt="">
+                                <img src="/its-client/img/metallic-image.png" alt="">
                                 <div class="wood-content__right-text">
                                  <span>
                                      "КБ - № барабана
@@ -1482,18 +1482,16 @@
                                     <span>K2 - длина отверстия для ввода кабеля</span>
                                 </div>
                             </div>
-                            <div class="norms__left-wood">
-                                <div class="norms__left" data-duration="2" data-delay="1">
-                                    <div class="norms__table">
+                            <div class="typography">
                                         <table>
-                                            <span class="table__name">Нормы загрузки</span>
-                                            <tr>
-                                                <th rowspan="3">Номер <br> барабана</th>
-                                                <th rowspan="3">Масса, <br> кг </th>
-                                                <th rowspan="3"> Кол-во комплектов* в <br> фуре (горизонтально)</th>
-                                            </tr>
-                                            <tr></tr>
-                                            <tr></tr>
+                                        <caption>Нормы загрузки</caption>
+                                        <tr>
+                                            <th rowspan="3">Номер <br> барабана</th>
+                                            <th rowspan="3">Масса, <br> кг </th>
+                                            <th rowspan="3"> Кол-во комплектов* в <br> фуре (горизонтально)</th>
+                                        </tr>
+                                        <tr></tr>
+                                        <tr></tr>
                                             <tr>
                                                 <td>8</td>
                                                 <td>34</td>
@@ -1600,28 +1598,26 @@
                                                 <td>30</td>
                                             </tr>
                                         </table>
-                                    </div>
-                                    <div class="norms__tablet-button">
                                         <a href="#">
-                                            <svg class="icon-svg icon-svg-download "><use xlink:href="./img/sprite.svg#download"></use></svg>
-                                            <span class="line"></span>
+                                            <svg class="icon-svg icon-svg-download "><use xlink:href="/its-client/img/sprite.svg#download"></use></svg>
+                                            <span></span>
                                             <span>Нормы загрузки</span>
                                         </a>
-                                    </div>
-                                    <div class="norms__left-bottom">
-                                        <div class="norms__left-text">
+                                        <a href="#">
+                                            <svg class="icon-svg icon-svg-download "><use xlink:href="/its-client/img/sprite.svg#download"></use></svg>
+                                            <span></span>
+                                            <span>Нормы намотки кабеля</span>
+                                        </a>
+                                        <h5 style="color: white">
                                             * - Данные в таблице приведены справочно и могут варьироваться в зависимости от размера полуприцепов. В силу особенностей погрузки может быть перегруз или недогруз до 10% .
-                                        </div>
-                                        <div class="norms__left-img">
-                                            <img src="img/norms-img.png" alt="">
-                                            <svg class="icon-svg icon-svg-add "><use xlink:href="./img/sprite.svg#add"></use></svg>
-                                        </div>
-                                    </div>
-                                </div>
+                                        </h5>
+                                        <p>
+                                            <img src="/its-client/img/norms-img.png" alt="">
+
+                                        </p>
                             </div>
                         </div>
                         ') !!}
-
                     </div>
                 </div>
             </div>
