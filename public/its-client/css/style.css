@@ -944,9 +944,9 @@ caption {
     overflow: hidden;
     transition: .7s; }
   .wood .norms__left.active {
-    height: 865px; }
+    height: auto; }
   .wood .norms__right.active {
-    height: 1667px; }
+    height: auto; }
   .wood-content {
     padding: 80px 150px 19px 150px;
     background: linear-gradient(97.87deg, #232526 0%, #232526 102.89%); }
@@ -3121,10 +3121,6 @@ caption {
     height: 8.47222vw; }
   .wood .norms__left {
     margin-right: 2.77778vw; }
-    .wood .norms__left.active {
-      height: 60.06944vw; }
-  .wood .norms__right.active {
-    height: 115.76389vw; }
   .wood-content {
     padding: 5.55556vw 10.41667vw 1.31944vw 10.41667vw; }
     .wood-content__button {
