@@ -245,7 +245,7 @@ var map = new google.maps.Map(document.getElementById('google-container'), map_o
 var marker = new google.maps.Marker ({
 map: map,
 position: {lat: 55.847109, lng: 49.153111},
-icon: 'img/marker.svg'
+icon: '/its-client/img/marker.svg'
 })
 </script>
     @include('fronts.layouts.inc.footer-inner')

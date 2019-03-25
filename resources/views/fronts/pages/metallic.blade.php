@@ -67,7 +67,7 @@
                         </div>
                         <div class="wood-content__btn">
                             <button class="btn-drums">
-                                <svg class="icon-svg icon-svg-arrow "><use xlink:href="/its-client/img//sprite.svg#arrow"></use></svg>
+                                <svg class="icon-svg icon-svg-arrow "><use xlink:href="/its-client/img/sprite.svg#arrow"></use></svg>
                                 <span>Подробнее</span>
                             </button>
                         </div>
@@ -75,14 +75,14 @@
                     <div class="wood-content__right">
                         <div class="wood-content__right_wrapper">
                             <div class="wood-content__right-img">
-                                <a href="img/metallic-img.png" data-fancybox="gallery">
-                                    <img src="img/metallic-img.png" alt="">
+                                <a href="/its-client/img/metallic-img.png" data-fancybox="gallery">
+                                    <img src="/its-client/img/metallic-img.png" alt="">
                                 </a>
                             </div>
                             <div class="wood-content__right-image" data-toggle="modal" data-target="#table-modal">
-                                <img src="img/metallic-image.png" alt="">
+                                <img src="/its-client/img/metallic-image.png" alt="">
                                 <button class="search">
-                                    <svg class="icon-svg icon-svg-search "><use xlink:href="/its-client/img//sprite.svg#search"></use></svg>
+                                    <svg class="icon-svg icon-svg-search "><use xlink:href="/its-client/img/sprite.svg#search"></use></svg>
                                 </button>
                             </div>
                             <div class="wood-content__right-text">
@@ -113,28 +113,28 @@
                         <div class="advantages__wrapper">
                             <div class="advantages__block my-animate fadeInUp" data-duration="2" data-delay="1">
                                 <div class="advantages__img">
-                                    <svg class="icon-svg icon-svg-advantages-5 "><use xlink:href="/its-client/img//sprite.svg#advantages-5"></use></svg>
+                                    <svg class="icon-svg icon-svg-advantages-5 "><use xlink:href="/its-client/img/sprite.svg#advantages-5"></use></svg>
                                 </div>
                                 <div class="advantages__name">Не резидент РФ?</div>
                                 <div class="advantages__text">Организуем экспортную поставку! Широкая география поставок. Затаможка в течении часа. Водитель на загрузке получает полный пакет документов!</div>
                             </div>
                             <div class="advantages__block my-animate fadeInUp" data-duration="2" data-delay="1.6">
                                 <div class="advantages__img">
-                                    <svg class="icon-svg icon-svg-advantages-7 "><use xlink:href="/its-client/img//sprite.svg#advantages-7"></use></svg>
+                                    <svg class="icon-svg icon-svg-advantages-7 "><use xlink:href="/its-client/img/sprite.svg#advantages-7"></use></svg>
                                 </div>
                                 <div class="advantages__name">Доставка</div>
                                 <div class="advantages__text">Организуем доставку кабельных барабанов по самым низким расценкам автоперевозчиков</div>
                             </div>
                             <div class="advantages__block my-animate fadeInUp" data-duration="2" data-delay="2.2">
                                 <div class="advantages__img">
-                                    <svg class="icon-svg icon-svg-wood-5 "><use xlink:href="/its-client/img//sprite.svg#wood-5"></use></svg>
+                                    <svg class="icon-svg icon-svg-wood-5 "><use xlink:href="/its-client/img/sprite.svg#wood-5"></use></svg>
                                 </div>
                                 <div class="advantages__name">Широкая география поставок</div>
                                 <div class="advantages__text">Россия, СНГ, ближнее зарубежье</div>
                             </div>
                             <div class="advantages__block my-animate fadeInUp" data-duration="2" data-delay="2.8">
                                 <div class="advantages__img">
-                                    <svg class="icon-svg icon-svg-wood-4 "><use xlink:href="/its-client/img//sprite.svg#wood-4"></use></svg>
+                                    <svg class="icon-svg icon-svg-wood-4 "><use xlink:href="/its-client/img/sprite.svg#wood-4"></use></svg>
                                 </div>
                                 <div class="advantages__name">100% лояльности</div>
                                 <div class="advantages__text">Клиенты возвращаются к нам</div>
@@ -390,7 +390,7 @@
         var marker = new google.maps.Marker ({
             map: map,
             position: {lat: 55.847109, lng: 49.153111},
-            icon: 'img/marker.svg'
+            icon: '/its-client/img/marker.svg'
         })
     </script>
     @include('fronts.layouts.inc.footer-inner')

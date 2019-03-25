@@ -9,12 +9,12 @@
     <title>{{ $title }}</title>
     <!-- Vendor styles plugins -->
     <!-- build:css css/plugins.css -->
-    <link rel="stylesheet" href="its-client/vendor/reset-css/reset.css">
-    <link rel="stylesheet" href="its-client/vendor/fullpage.js/dist/fullpage.min.css">
-    <link rel="stylesheet" href="its-client/vendor/animate.css/animate.min.css">
-    <link rel="stylesheet" href="its-client/vendor/fancybox/dist/jquery.fancybox.min.css">
-    <link rel="stylesheet" href="its-client/vendor/swiper/dist/css/swiper.min.css">
-    <link rel="stylesheet" href="its-client/vendor/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/its-client/vendor/reset-css/reset.css">
+    <link rel="stylesheet" href="/its-client/vendor/fullpage.js/dist/fullpage.min.css">
+    <link rel="stylesheet" href="/its-client/vendor/animate.css/animate.min.css">
+    <link rel="stylesheet" href="/its-client/vendor/fancybox/dist/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="/its-client/vendor/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="/its-client/vendor/bootstrap/dist/css/bootstrap.min.css">
 
     <link rel="stylesheet" href="/its-client/css/style.css" inline>
     @stack('styles')
