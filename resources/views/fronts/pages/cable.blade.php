@@ -121,7 +121,7 @@
                     <svg class="icon-svg icon-svg-arrow-right "><use xlink:href="/its-client/img/sprite.svg#arrow-right"></use></svg>
                 </div>
             </div>
-            @include('fronts.blocks.advantages-block')
+            @include('fronts.blocks.advantages-cable')
 
             <div class="about about_contacts">
                 <div class="about__wrapper">
