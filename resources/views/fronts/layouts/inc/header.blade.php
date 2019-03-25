@@ -2,7 +2,7 @@
     <div class="header__wrapper">
         <div class="header__left">
             <div class="header__phone">
-                <svg class="icon-svg icon-svg-phone "><use xlink:href="./img/sprite.svg#phone"></use></svg>
+                <svg class="icon-svg icon-svg-phone "><use xlink:href="/its-client/img/sprite.svg#phone"></use></svg>
                 <span>
                         8 (843) 239 02 81
                     </span>
@@ -30,6 +30,7 @@
                             </li>
                             <li><a href="/cable">Барабаны <br> для канатов</a></li>
                             <li><a href="/metallic">Стальные барабаны</a></li>
+                            <li><a href="/norms">Нормы</a></li>
                             <li><a href="/advantages">Преимущества</a></li>
                             <li><a href="/about">О компании</a></li>
                             <li><a href="/contacts">Контакты</a></li>
