@@ -1248,9 +1248,9 @@
     </script>
 
     <script>
-        var latitude = 55.847569,
-            longitude = 49.153202,
-            map_zoom = 17;
+        var latitude = {{ variable('contact_latitude', '55.847069') }},
+            longitude = {{ variable('contact_longitude', '49.153202') }},
+            map_zoom = {{ variable('contact_map_zoom', '17') }};
 
         var style= [
             {
@@ -1449,7 +1449,7 @@
 
         var marker = new google.maps.Marker ({
             map: map,
-            position: {lat: 55.847109, lng: 49.153111},
+            position: {lat: latitude, lng: longitude},
             icon: '/its-client/img/marker.svg'
         })
     </script>
