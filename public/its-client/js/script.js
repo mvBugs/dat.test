@@ -126,7 +126,32 @@
         }
 
         initSwiper()
-        
+          
+
+            
         })
+
+
+          //Добавляем свои иконки для кнопок увеличить/уменьшить на карту
+          function CustomZoomControl(controlDiv, map) { 
+              var controlUIzoomIn= document.getElementById('zoom-in'),
+                  controlUIzoomOut= document.getElementById('zoom-out');
+              controlDiv.appendChild(controlUIzoomIn);
+              controlDiv.appendChild(controlUIzoomOut);
+
+              //Делаем привязку для кнопок увеличить/уменьшить при клике
+              google.maps.event.addDomListener(controlUIzoomIn, 'click', function() {
+                  map.setZoom(map.getZoom()+1)
+              });
+              google.maps.event.addDomListener(controlUIzoomOut, 'click', function() {
+                  map.setZoom(map.getZoom()-1)
+              });
+          }
+
+          var zoomControlDiv = document.createElement('div');
+          var zoomControl = new CustomZoomControl(zoomControlDiv, map);
+
+          //Помещаем кнопки увеличить/уменьшить на карту в левый верхний угол
+          map.controls[google.maps.ControlPosition.LEFT_BOTTOM].push(zoomControlDiv);
 
 })(jQuery)

@@ -150,8 +150,12 @@
                                </div>
                            ') !!}
                             <div class="contacts__right my-animate fadeInRight" data-duration="2" data-delay="1">
-                                <div class="map" id="google-map" data-page="contacts">
+                                <div class="map" id="google-map">
                                     <div id="google-container"></div>
+                                    <div class="arrows-button">
+                                        <div id="zoom-in">+</div>
+                                        <div id="zoom-out">-</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

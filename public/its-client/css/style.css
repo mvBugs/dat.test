@@ -821,6 +821,32 @@ caption {
 .map #google-container .gm-fullscreen-control {
   display: none; }
 
+.map #zoom-in, .map #zoom-out {
+  cursor: pointer;
+  padding: 5px;
+  background-color: #fff;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #b3b3b3; }
+
+.map #zoom-in {
+  border-bottom: 1px solid #b3b3b3;
+  font-size: 25px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: initial;
+  border-bottom-right-radius: initial; }
+
+.map #zoom-out {
+  font-size: 40px;
+  border-top-left-radius: initial;
+  border-top-right-radius: initial;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px; }
+
 .wood {
   transition: .3s;
   position: relative;
