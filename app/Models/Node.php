@@ -28,15 +28,13 @@ class Node extends Model implements HasMedia
     public function registerMediaConversions(Media $media = null)
     {
 //        dd($this->holder_first()->system_name);
-
         $this->addMediaConversion('thumb')
             ->width(50)
             ->height(50)
             ->sharpen(10);
 
         $this->addMediaConversion('gallery')
-            ->width(266.44)
-            ->height(266.44);
+            ->fit('crop', 274, 274)->format('png');
     }
 
     public function previous()

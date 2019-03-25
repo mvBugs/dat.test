@@ -33,6 +33,7 @@
         'fronts.pages.write'        => 'Напишыте нам',
         'fronts.pages.wood'         => 'Деревянные барабаны',
         'fronts.pages.cable'        => 'Канатные барабаны',
+        'fronts.pages.metallic'     => 'Стальные барабаны',
         ], null, ['class' => 'form-control select2', 'data-minimum-results-for-search' => '-1']) !!}
     {!! $errors->first('data.blade', '<p class="help-block">:message</p>') !!}
 </div>

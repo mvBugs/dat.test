@@ -103,7 +103,7 @@
                             <div class="swiper-slide">
                                 <div class="wood-img__block">
                                     <a href="{{ $image->getUrl() ?? '/its-client/img/wood-img-1.png' }}" data-fancybox="gallery">
-                                        <img src="{{ $image->getUrl() ?? '/its-client/img/wood-img-1.png' }}" alt="">
+                                        <img src="{{ $image->getUrl('gallery') ?? '/its-client/img/wood-img-1.png' }}" alt="">
                                         <div class="hide">
                                             <svg class="icon-svg icon-svg-add "><use xlink:href="/its-client/img/sprite.svg#add"></use></svg>
                                         </div>
