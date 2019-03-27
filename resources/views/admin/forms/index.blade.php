@@ -25,6 +25,11 @@
                     <tr>
                         <th style="width:35px;">#</th>
                         {{--<th>Пользователь</th>--}}
+                        <th style="width: 100px;">Имя</th>
+                        <th style="width: 100px;">Название организации</th>
+                        <th style="width: 100px;">Телефон</th>
+                        <th style="width: 100px;">Email</th>
+                        <th style="width: 100px;">Сообщение</th>
                         <th style="width: 100px;">Создано</th>
                         <th style="width: 100px;">Оновлено</th>
                         <th style="width: 150px">Статус</th>
@@ -35,7 +40,11 @@
                     @foreach($forms as $form)
                     <tr>
                         <td>{{ $form->id }}</td>
-                        {{--<td>{{ optional($form->user)->name }}</td>--}}
+                        <td>{{ $form->data['name'] }}</td>
+                        <td>{{ $form->data['company'] }}</td>
+                        <td>{{ $form->data['phone'] }}</td>
+                        <td>{{ $form->data['email'] }}</td>
+                        <td>{{ $form->data['description'] }}</td>
                         <td>{{ $form->created_at }}</td>
                         <td>{{ $form->updated_at }}</td>
                         <td>
