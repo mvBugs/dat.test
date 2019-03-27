@@ -32,6 +32,9 @@
                 .my-animate {
                      visibility: visible;
                 }
+                .norms__tablet-button {
+                    display: flex;
+                }
             </style>
     @endif
     <!-- endbuild -->

@@ -9,9 +9,10 @@
         </div>
         <div class="norms">
             <div class="norms__wrapper">
-            {!! \BlockVisualEditor::render('norms__right-left', '
+
         <div class="norms__left my-animate fadeInLeft" data-duration="2" data-delay="1">
         <div class="norms__table">
+        {!! \BlockVisualEditor::render('norms__right-left', '
             <table>
                 <span class="table__name">Нормы загрузки</span>
                 <tr>
@@ -126,19 +127,21 @@
                     <td>759</td>
                     <td>30</td>
                 </tr>
-            </table>
+            </table>') !!}
         </div>
-        <div class="norms__tablet-button">
+            <div class="norms__tablet-button">
+            {!! \BlockVisualEditor::render('norms__button', '
             <a href="#">
-                <svg class="icon-svg icon-svg-download "><use xlink:href="./img/sprite.svg#download"></use></svg>
+                <svg class="icon-svg icon-svg-download "><use xlink:href="/its-client/img/sprite.svg#download"></use></svg>
                 <span class="line"></span>
                 <span>Нормы загрузки</span>
             </a>
             <a href="#">
-                <svg class="icon-svg icon-svg-download "><use xlink:href="./img/sprite.svg#download"></use></svg>
+                <svg class="icon-svg icon-svg-download "><use xlink:href="/its-client/img/sprite.svg#download"></use></svg>
                 <span class="line"></span>
                 <span>Нормы намотки кабеля</span>
             </a>
+             ')   !!}
         </div>
         <div class="norms__left-bottom">
             <div class="norms__left-text">
@@ -149,10 +152,11 @@
             </div>
         </div>
     </div>
-            ') !!}
-            {!! \BlockVisualEditor::render('norms__right-right', '
+
+
                 <div class="norms__right my-animate fadeInRight" data-duration="2" data-delay="1">
                 <div class="norms__table">
+                {!! \BlockVisualEditor::render('norms__right-right', '
                     <table>
                         <span class="table__name">Нормы намотки кабеля</span>
                         <tr>
@@ -1059,10 +1063,10 @@
                             <td>400</td>
                             <td>450</td>
                         </tr>
-                    </table>
+                    </table>') !!}
                 </div>
             </div>
-            ') !!}
+
             </div>
         </div>
     @include('fronts.layouts.inc.footer-inner')
