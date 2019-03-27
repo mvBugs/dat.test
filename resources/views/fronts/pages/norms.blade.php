@@ -4,7 +4,7 @@
     @include('fronts.layouts.inc.header')
         <div class="about about_norms">
             <div class="about__wrapper">
-                <h1 class="about__name big-name">Нормы</h1>
+                <h1 class="about__name big-name">{{ $node->name }}</h1>
             </div>
         </div>
         <div class="norms">
