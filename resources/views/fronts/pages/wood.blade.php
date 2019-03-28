@@ -108,8 +108,9 @@
                 <div class="norms__wrapper">
 
                     <div class="norms__left-wood">
-                    {!! \BlockVisualEditor::render('norms__left-wood', '
+
                         <div class="norms__left" data-duration="2" data-delay="1">
+                    {!! \BlockVisualEditor::render('norms__left-wood', '
                             <div class="norms__table">
                                 <table>
                                     <span class="table__name">Нормы загрузки</span>
@@ -226,18 +227,20 @@
                                         <td>30</td>
                                     </tr>
                                 </table>
-                            </div>
+                            </div>') !!}
                             <div class="norms__tablet-button">
-                                <a href="#">
-                                    <svg class="icon-svg icon-svg-download "><use xlink:href="/its-client/img/sprite.svg#download"></use></svg>
-                                    <span class="line"></span>
-                                    <span>Нормы загрузки</span>
-                                </a>
-                                <a href="#">
-                                    <svg class="icon-svg icon-svg-download "><use xlink:href="/its-client/img/sprite.svg#download"></use></svg>
-                                    <span class="line"></span>
-                                    <span>Нормы намотки кабеля</span>
-                                </a>
+                                {!! \BlockVisualEditor::render('norms__button', '
+                                    <a href="#">
+                                        <svg class="icon-svg icon-svg-download "><use xlink:href="/its-client/img/sprite.svg#download"></use></svg>
+                                        <span class="line"></span>
+                                        <span>Нормы загрузки</span>
+                                    </a>
+                                    <a href="#">
+                                        <svg class="icon-svg icon-svg-download "><use xlink:href="/its-client/img/sprite.svg#download"></use></svg>
+                                        <span class="line"></span>
+                                        <span>Нормы намотки кабеля</span>
+                                    </a>
+                                 ')   !!}
                             </div>
                             <div class="norms__left-bottom">
                                 <div class="norms__left-text">
@@ -249,7 +252,7 @@
                                 </div>
                             </div>
                         </div>
-                    ') !!}
+
                         <button class="btn-1">
                             <svg class="icon-svg icon-svg-arrow "><use xlink:href="/its-client/img/sprite.svg#arrow"></use></svg>
                             Подробнее
@@ -1861,18 +1864,11 @@
                                                     <td>1680</td>
                                                     <td>8</td>
                                                 </tr>
-                                            </table>
-
                                         </table>
                                         <a href="#">
                                             <svg class="icon-svg icon-svg-download "><use xlink:href="/its-client/img/sprite.svg#download"></use></svg>
                                             <span></span>
                                             <span>Нормы загрузки</span>
-                                        </a>
-                                        <a href="#">
-                                            <svg class="icon-svg icon-svg-download "><use xlink:href="/its-client/img/sprite.svg#download"></use></svg>
-                                            <span></span>
-                                            <span>Нормы намотки кабеля</span>
                                         </a>
                                         <h5 style="color: white">
                                             * - Данные в таблице приведены справочно и могут варьироваться в зависимости от размера полуприцепов. В силу особенностей погрузки может быть перегруз или недогруз до 10% .

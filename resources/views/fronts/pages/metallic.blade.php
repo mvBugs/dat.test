@@ -644,11 +644,6 @@
                                             <span></span>
                                             <span>Нормы загрузки</span>
                                         </a>
-                                        <a href="#">
-                                            <svg class="icon-svg icon-svg-download "><use xlink:href="/its-client/img/sprite.svg#download"></use></svg>
-                                            <span></span>
-                                            <span>Нормы намотки кабеля</span>
-                                        </a>
                                         <h5 style="color: white">
                                             * - Данные в таблице приведены справочно и могут варьироваться в зависимости от размера полуприцепов. В силу особенностей погрузки может быть перегруз или недогруз до 10% .
                                         </h5>

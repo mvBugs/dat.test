@@ -3570,6 +3570,16 @@ caption {
     top: -2.60417vw;
     width: 4.94792vw;
     height: 4.94792vw; }
+  .modal .typography span {
+    color: white; }
+  .modal .typography a span {
+    margin-bottom: 0; }
+    .modal .typography a span:first-child {
+      margin-right: 14px;
+      width: 2px;
+      height: 22px;
+      display: block;
+      background-color: #F7F8F9; }
   .modal .norms__wrapper {
     padding: 8.85417vw 3.90625vw; }
     .modal .norms__wrapper table {
@@ -3588,15 +3598,19 @@ caption {
       background: #FD8000;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); }
       .modal .norms__wrapper a svg {
+        color: white;
         width: 18px;
         height: 22px;
+        margin: 0;
         margin-right: 16px; }
-      .modal .norms__wrapper a span:first-child {
-        margin-right: 14px;
-        width: 2px;
-        height: 22px;
-        display: block;
-        background-color: #F7F8F9; } }
+      .modal .norms__wrapper a span {
+        color: white; }
+        .modal .norms__wrapper a span:first-child {
+          margin-right: 14px;
+          width: 2px;
+          height: 22px;
+          display: block;
+          background-color: #F7F8F9; } }
 
 @media screen and (max-width: 767px) {
   .modal-dialog {

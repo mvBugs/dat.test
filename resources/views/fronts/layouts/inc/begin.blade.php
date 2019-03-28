@@ -35,6 +35,13 @@
                 .norms__tablet-button {
                     display: flex;
                 }
+                .icon-svg-download {
+                    display: block;
+                }
+
+                .typography a{
+                    display: block;
+                }
             </style>
     @endif
     <!-- endbuild -->
