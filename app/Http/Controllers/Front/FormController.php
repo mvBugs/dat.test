@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Front;
 
+use App\Events\SendEmail;
 use App\Http\Requests\Front\FormsRequest;
 use App\Http\Traits\MediaLibraryManageTrait;
 use App\Models\Form;
@@ -24,6 +25,8 @@ class FormController extends Controller
             'locale' => $request->get('locale') ?? 'en', // TODO,
             'data' => $request->validated(),
         ]);
+
+        event(new SendEmail());
 
         /*if ($request->has('terms')) {
             $form->terms()->sync(array_values_recursive($request->terms));
