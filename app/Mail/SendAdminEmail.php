@@ -12,15 +12,17 @@ class SendAdminEmail extends Mailable
     use Queueable, SerializesModels;
 
     public $text;
+    public $data;
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($text)
+    public function __construct($text, $event)
     {
         //
         $this->text = $text;
+        $this->data = $event;
     }
 
     /**

@@ -26,7 +26,7 @@ class FormController extends Controller
             'data' => $request->validated(),
         ]);
 
-        event(new SendEmail());
+        event(new SendEmail($request->validated()));
 
         /*if ($request->has('terms')) {
             $form->terms()->sync(array_values_recursive($request->terms));
