@@ -30,6 +30,6 @@ class SendAdminEmail extends Mailable
      */
     public function build()
     {
-        return $this->view('email.email');
+        return $this->from(variable('mail_from_address'), variable('mail_from_name'))->view('email.email');
     }
 }

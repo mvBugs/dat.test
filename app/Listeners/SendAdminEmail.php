@@ -28,6 +28,6 @@ class SendAdminEmail
     {
         //
         $url = config('app.url');
-        \Mail::to(variable('mail_from_address'))->send(new \App\Mail\SendAdminEmail('Пользователь оставил сообщение на сайте '.$url));
+        \Mail::to(variable('mail_to_address'))->send(new \App\Mail\SendAdminEmail('Пользователь оставил сообщение на сайте '.$url));
     }
 }
