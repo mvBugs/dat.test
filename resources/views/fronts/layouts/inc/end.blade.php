@@ -8,6 +8,7 @@
 <script src="/its-client/vendor/fancybox/dist/jquery.fancybox.min.js"></script>
 <script src="/its-client/vendor/swiper/dist/js/swiper.min.js"></script>
 <script src="/its-client/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="/its-client/vendor/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
 
 <!-- endbuild -->
 <!-- Scripts application -->

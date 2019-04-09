@@ -42,13 +42,15 @@
                                 @if($errors->has('phone'))
                                 <div class="form-group">
                                     <label for="">Телефон</label>
-                                    <input class="error" type="text" name="phone" value="{{ old('phone') }}">
+                                    <input class="error" placeholder="+ 7 (___) __-__-__" name="phone" data-mask="+7 (000) 00-00-00" data-mask-clearifnotmatch="true" type="text" value="{{ old('phone') }}">
+                                    {{--<input class="error" type="text" name="phone" value="{{ old('phone') }}">--}}
                                     <p class="error">{{ $errors->first('phone') }}</p>
                                 </div>
                                 @else
                                     <div class="form-group">
                                         <label for="">Телефон</label>
-                                        <input type="text" name="phone" @if($errors->has('*')) value="{{ old('phone') }}" @endif>
+                                        <input placeholder="+ 7 (___) __-__-__" name="phone" data-mask="+7 (000) 00-00-00" data-mask-clearifnotmatch="true" type="text" @if($errors->has('*')) value="{{ old('phone') }}" @endif>
+                                        {{--<input type="text" name="phone" @if($errors->has('*')) value="{{ old('phone') }}" @endif>--}}
                                     </div>
                                 @endif
                                 @if($errors->has('email'))
