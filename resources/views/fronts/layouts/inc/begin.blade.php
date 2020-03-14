@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="/its-client/vendor/bootstrap/dist/css/bootstrap.min.css">
 
     <link rel="stylesheet" href="/its-client/css/style.css" inline>
+    <link rel="stylesheet" href="/css/common.css" inline>
+    <script src="https://use.fontawesome.com/5ad77bb345.js"></script>
     @stack('styles')
 
     @if(config('visual-editable.available'))

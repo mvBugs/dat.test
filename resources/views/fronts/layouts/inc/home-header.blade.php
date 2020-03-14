@@ -24,24 +24,14 @@
                     <nav>
                         <ul>
                             {!! \BlockVisualEditor::render('menu', '
-                            <li><a href="/" class="active">Главная</a></li>
-                            <li><a href="/wood">
-                                    Кабельные
-                                    барабаны
-                                </a>
-                            </li>
-                            <li><a href="/cable">Барабаны <br> для канатов</a></li>
-                            <li><a href="/metallic">Стальные барабаны</a></li>
-                            <li><a href="/norms">Нормы</a></li>
-                            <li><a href="/advantages">Преимущества</a></li>
-                            <li><a href="/about">О компании</a></li>
-                            <li><a href="/contacts">Контакты</a></li>
-                            <li><a href="/write">Напишите нам</a></li>
-                            <li><a href="/export">Експорт</a></li>
-                            <li><a href="#">Закупка </a></li>
-                            <li><a href="/delivery">Доставка</a></li>
+                                <li><a href="#rubble" class="active">Щебінь</a></li>
+                                <li><a href="#sand">Пісок</a></li>
+                                <li><a href="#peat">Торф</a></li>
+                                <li><a href="#wood">Дрова</a></li>
+                                <li><a href="#bobcat">Послуги БОБКАТА</a></li>
+                                <li><a href="/write">Напишите нам</a></li>
+                                <li><a href="/delivery">Доставка</a></li>
                             ') !!}
-
                         </ul>
                     </nav>
                 </div>

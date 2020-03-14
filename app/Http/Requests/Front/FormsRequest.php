@@ -20,10 +20,8 @@ class FormsRequest extends FormRequest
     {
         return [
             'name' => 'required|string',
-            'email' => 'required|email',
-            'company' => 'required|',
             'phone' => 'required|string|max:20',
-            'description' => 'required|',
+            'description' => 'required',
         ];
     }
 

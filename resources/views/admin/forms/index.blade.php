@@ -25,15 +25,13 @@
                     <tr>
                         <th style="width:35px;">#</th>
                         {{--<th>Пользователь</th>--}}
-                        <th style="width: 100px;">Имя</th>
-                        <th style="width: 100px;">Название организации</th>
+                        <th style="width: 100px;">Ім'я</th>
                         <th style="width: 100px;">Телефон</th>
-                        <th style="width: 100px;">Email</th>
-                        <th style="width: 100px;">Сообщение</th>
-                        <th style="width: 100px;">Создано</th>
+                        <th style="width: 100px;">Пвідомення</th>
+                        <th style="width: 100px;">Створено</th>
                         <th style="width: 100px;">Оновлено</th>
                         <th style="width: 150px">Статус</th>
-                        <th style="width:100px;">Действия</th>
+                        <th style="width:100px;">Дії</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -41,9 +39,7 @@
                     <tr>
                         <td>{{ $form->id }}</td>
                         <td>{{ $form->data['name'] }}</td>
-                        <td>{{ $form->data['company'] }}</td>
-                        <td>{{ $form->data['phone'] }}</td>
-                        <td>{{ $form->data['email'] }}</td>
+                        <td><a href="tel:{{ $form->data['phone'] }}">{{ $form->data['phone'] }}</a></td>
                         <td>{{ $form->data['description'] }}</td>
                         <td>{{ $form->created_at }}</td>
                         <td>{{ $form->updated_at }}</td>
@@ -56,7 +52,6 @@
                         </td>
                         <td style="width: 110px">
                             <div class="btn-group">
-                                {{--<a href="{{ route('admin.forms.edit', $form) }}" class="btn btn-xs btn-warning"><i class="fa fa-edit"></i></a>--}}
                                 <a href="#" data-url="{{ route('admin.forms.destroy', $form) }}" class="btn btn-xs btn-danger js-action-destroy"><i class="fa fa-remove"></i></a>
                             </div>
                         </td>

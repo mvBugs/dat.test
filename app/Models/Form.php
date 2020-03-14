@@ -21,9 +21,9 @@ class Form extends Model implements HasMedia
 
     /** @var array */
     public static $formStatuses = [
-        self::STATUS_NEW => 'Новый запрос',
-        self::STATUS_PROCESSED_ACCEPT => 'Обработано, одобрено',
-        self::STATUS_PROCESSED_REJECTED => 'Обработано, отклонено',
+        self::STATUS_NEW => 'Нове',
+        self::STATUS_PROCESSED_ACCEPT => 'Обролене, одобрене',
+        self::STATUS_PROCESSED_REJECTED => 'Обролене, відхилено',
     ];
 
     /** @var array */

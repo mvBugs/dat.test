@@ -8,6 +8,7 @@ use App\Http\Traits\MediaLibraryManageTrait;
 use App\Models\Form;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Notification;
 
 class FormController extends Controller
 {
@@ -22,30 +23,9 @@ class FormController extends Controller
     {
         $form = Form::create([
             'type' => 'write',
-            'locale' => $request->get('locale') ?? 'en', // TODO,
+            'locale' => $request->get('locale') ?? 'uk', // TODO,
             'data' => $request->validated(),
         ]);
-
-        event(new SendEmail($request->validated()));
-
-        /*if ($request->has('terms')) {
-            $form->terms()->sync(array_values_recursive($request->terms));
-        }
-
-        $this->manageMedia($form, $request);
-
-        $destination = $request->session()->pull('destination', \URL::previous());
-        if ($request->ajax()) {
-            return response()->json([
-                'message' => 'Ваша заявка успешно принята и будет обработана!',
-                'action' => 'reset',
-                'status' => 'success', //warning
-                //'action' => 'redirect', //reset
-                //'destination' => $destination,
-                //'message' => trans('notifications.store.success'),
-                //'html' => '<p>example</p>',
-            ]);
-        }*/
 
         return redirect()->route('write.end');
     }
