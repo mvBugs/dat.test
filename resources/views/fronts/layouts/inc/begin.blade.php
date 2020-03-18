@@ -6,6 +6,8 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta http-equiv="Cache-Control" content="no-cache">
+    <meta name="keywords" content="keyword1, keyword2, mykolaVoitovych" />
+    <meta name="description" content="this is description mykolaVoitovych" />
     <title>{{ $title }}</title>
     <!-- Vendor styles plugins -->
     <!-- build:css css/plugins.css -->
