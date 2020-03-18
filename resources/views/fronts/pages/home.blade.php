@@ -6,7 +6,7 @@
 <div class="home">
     <div id="fullpage">
         <div class="section" data-anchor="rubble">
-            <div class="home__section" style="background-image:  url('/its-client/img/datsuk/home-one.png') ">
+            <div class="home__section" style="background-image:  url('/its-client/img/datsuk/home-one.webp') ">
                 <div class="home__section-wrapper" >
                     <div class="home__section-left anim fadeInLeft animated delay-0.5s" data-effect="fadeInLeft">
                     {!! \BlockVisualEditor::render('home_one_more', '
@@ -30,7 +30,7 @@
             </div>
         </div>
         <div class="section" data-anchor="sand">
-            <div class="home__section" style="background-image:  url('/its-client/img/datsuk/home-two.png') ">
+            <div class="home__section" style="background-image:  url('/its-client/img/datsuk/home-two.webp') ">
                 <div class="home__section-wrapper" >
                     <div class="home__section-left anim none delay-0.1s" data-effect="fadeInLeft">
                     {!! \BlockVisualEditor::render('home_two_more', '
@@ -54,7 +54,7 @@
             </div>
         </div>
         <div class="section" data-anchor="peat">
-            <div class="home__section" style="background-image:  url('/its-client/img/datsuk/home-three.png') ">
+            <div class="home__section" style="background-image:  url('/its-client/img/datsuk/home-three.webp') ">
                 <div class="home__section-wrapper" >
                     <div class="home__section-left anim none " data-effect="fadeInLeft">
                     {!! \BlockVisualEditor::render('home_three_more', '
@@ -78,7 +78,7 @@
             {{--@include('fronts.layouts.inc.footer')--}}
         </div>
         <div class="section" data-anchor="wood">
-            <div class="home__section" style="background-image:  url('/its-client/img/datsuk/home-four.jpg') ">
+            <div class="home__section" style="background-image:  url('/its-client/img/datsuk/home-four.webp') ">
                 <div class="home__section-wrapper" >
                     <div class="home__section-left anim none " data-effect="fadeInLeft">
                     {!! \BlockVisualEditor::render('home_four_more', '
@@ -99,7 +99,7 @@
             </div>
         </div>
         <div class="section" data-anchor="bobcat">
-            <div class="home__section" style="background-image:  url('/its-client/img/datsuk/home-five.jpg')">
+            <div class="home__section" style="background-image:  url('/its-client/img/datsuk/home-five.webp')">
                 <div class="home__section-wrapper" >
                     <div class="home__section-left anim none " data-effect="fadeInLeft">
                     {!! \BlockVisualEditor::render('home_five_more', '
