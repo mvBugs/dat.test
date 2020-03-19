@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Fomvasss\Variable\Models\Variable;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\Cache;
 
 class VariableController extends Controller
 {
@@ -45,8 +47,7 @@ class VariableController extends Controller
             $this->updateOrCreate($key, json_encode($value));
         }
 
-        \Cache::forget('laravel.variables.cache');
-        \Artisan::call('config:clear');
+        Cache::forget('laravel.variables.cache');
 
         $destination = $request->session()->pull('destination', route('admin.variable.forms'));
         return redirect()->to($destination)

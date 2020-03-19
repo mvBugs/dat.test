@@ -7,9 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta http-equiv="Cache-Control" content="no-cache">
     <meta name="google-site-verification" content="G5kWTYcd9OW1TJEF8Tjrt6bqUl0EulTQ89zRM8Hpgl4" />
-    <meta name="keywords" content="keyword1, keyword2, mykolaVoitovych" />
-    <meta name="description" content="this is description mykolaVoitovych" />
-    <title>{{ $title }}</title>
+    <meta name="title" content="{{ variable('title') }}" />
+    <meta name="keywords" content="{{ variable('keywords') }}" />
+    <meta name="description" content="{{ variable('description') }}" />
+    <title>{{ variable('app_name') }}</title>
     <!-- Vendor styles plugins -->
     <!-- build:css css/plugins.css -->
     <link rel="stylesheet" href="/its-client/vendor/reset-css/reset.css">

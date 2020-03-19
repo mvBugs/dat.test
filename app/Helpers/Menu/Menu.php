@@ -9,6 +9,7 @@
 namespace App\Helpers\Menu;
 
 use App\Models\Menu\MenuItem;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Request;
 
 class Menu
@@ -141,7 +142,7 @@ class Menu
      */
     public function suffix(MenuItem $item): string
     {
-        $suffixes = $this->config['suffixes'];
+        $suffixes = Arr::get($this, 'config.suffixes');
 
         $suffix = $item->suffix ?? $item->name;
 

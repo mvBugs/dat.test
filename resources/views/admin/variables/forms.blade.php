@@ -27,27 +27,22 @@
                             {!! $errors->first('vars.app_name', '<p class="help-block">:message</p>') !!}
                         </div>
 
-                        <div class="form-group {{ $errors->has('vars.mail_from_address') ? 'has-error' : ''}}">
-                            <label for="vars.mail_from_address">Email отправителя</label>
-                            <input type="email" class="form-control" name="vars[mail_from_address]" value="{{ variable('mail_from_address') }}">
-                            {!! $errors->first('vars.mail_from_address', '<p class="help-block">:message</p>') !!}
+                        <div class="form-group {{ $errors->has('vars.title') ? 'has-error' : ''}}">
+                            <label for="vars.mail_from_address">Title</label>
+                            <input type="text" class="form-control" name="vars[title]" value="{{ variable('title') }}">
+                            {!! $errors->first('vars.title', '<p class="help-block">:message</p>') !!}
                         </div>
 
-                        <div class="form-group {{ $errors->has('vars.mail_from_name') ? 'has-error' : ''}}">
-                            <label for="vars.mail_from_name">Имя отправителя Email</label>
-                            <input type="text" class="form-control" name="vars[mail_from_name]" value="{{ variable('mail_from_name') }}">
-                            {!! $errors->first('vars.mail_from_name', '<p class="help-block">:message</p>') !!}
+                        <div class="form-group {{ $errors->has('vars.keywords') ? 'has-error' : ''}}">
+                            <label for="vars.mail_from_name">Keywords</label>
+                            <textarea class="form-control" name="vars[keywords]">{{ variable('keywords') }}</textarea>
+                            {!! $errors->first('vars.keywords', '<p class="help-block">:message</p>') !!}
                         </div>
 
-                        <div class="form-group {{ $errors->has('vars.mail_to_address') ? 'has-error' : ''}}">
-                            <label for="vars.mail_to_address">Email получателя</label>
-                            <input type="email" class="form-control" name="vars[mail_to_address]" value="{{ variable('mail_to_address') }}">
-                            {!! $errors->first('vars.mail_to_address', '<p class="help-block">:message</p>') !!}
-                        </div>
-                        <div class="form-group {{ $errors->has('vars.mail_to_name') ? 'has-error' : ''}}">
-                            <label for="vars.mail_to_name">Имя получателя</label>
-                            <input type="text" class="form-control" name="vars[mail_to_name]" value="{{ variable('mail_to_name') }}">
-                            {!! $errors->first('vars.mail_to_name', '<p class="help-block">:message</p>') !!}
+                        <div class="form-group {{ $errors->has('vars.description') ? 'has-error' : ''}}">
+                            <label for="vars.description">Description</label>
+                            <textarea class="form-control" name="vars[description]">{{ variable('description') }}</textarea>
+                            {!! $errors->first('vars.description', '<p class="help-block">:message</p>') !!}
                         </div>
                     </div>
                     <div class="box-footer">
@@ -67,7 +62,7 @@
                     <div class="box-body">
                         @csrf
                         {{--<input type="hidden" name="group" value="prices">--}}
-                        @include('admin.fields.field-links', [
+                        {{--@include('admin.fields.field-links', [
                            'label' => 'Способы доставки',
                            'field_name' => 'vars_json[delivery_methods]',
                            'key_key' => 'key',
@@ -85,7 +80,7 @@
                            'placeholder_key' => 'Ключ',
                            'placeholder_value' => 'Цена',
                            'items' => json_decode(variable('delivery_methods_price', '[]'), true),
-                       ])
+                       ])--}}
                     </div>
                     <div class="box-footer">
                         @include('admin.fields.field-form-buttons')
@@ -137,7 +132,7 @@
                             <input type="text" class="form-control" name="vars[company_phone]" value="{{ variable('company_phone') }}">
                             {!! $errors->first('vars.company_phone', '<p class="help-block">:message</p>') !!}
                         </div>
-                        <div class="form-group {{ $errors->has('vars.company_work_schedule') ? 'has-error' : ''}}">
+                        {{--<div class="form-group {{ $errors->has('vars.company_work_schedule') ? 'has-error' : ''}}">
                             <label for="vars.company_work_schedule">График работы компании</label>
                             <input type="text" class="form-control" name="vars[company_work_schedule]" value="{{ variable('company_work_schedule') }}">
                             {!! $errors->first('vars.company_work_schedule', '<p class="help-block">:message</p>') !!}
@@ -161,7 +156,7 @@
                             <label for="vars.contact_map_zoom">Масштаб</label>
                             <input type="number" min="2" max="20" step="1" class="form-control" name="vars[contact_map_zoom]" value="{{ variable('contact_map_zoom') }}">
                             {!! $errors->first('vars.contact_map_zoom', '<p class="help-block">:message</p>') !!}
-                        </div>
+                        </div>--}}
                     </div>
                     <div class="box-footer">
                         @include('admin.fields.field-form-buttons')
