@@ -2,15 +2,15 @@
 <html lang="zxx">
 <head>
     <meta charset="UTF-8">
+    <meta name="title" content="{{ variable('title') }}" />
+    <meta name="keywords" content="{{ variable('keywords') }}" />
+    <meta name="description" content="{{ variable('description') }}" />
     <meta name="robots" content="nosnippet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta http-equiv="Cache-Control" content="no-cache">
     <meta name="google-site-verification" content="G5kWTYcd9OW1TJEF8Tjrt6bqUl0EulTQ89zRM8Hpgl4" />
-    <meta name="title" content="{{ variable('title') }}" />
-    <meta name="keywords" content="{{ variable('keywords') }}" />
-    <meta name="description" content="{{ variable('description') }}" />
     <title>{{ variable('app_name') }}</title>
     <!-- Vendor styles plugins -->
     <!-- build:css css/plugins.css -->
