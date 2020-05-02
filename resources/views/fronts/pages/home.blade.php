@@ -126,7 +126,7 @@
         </div>
     </div>
 </div>
-<div type="button" class="callback-bt" data-phone="{{ variable('company_phone', '+380509910785') }}">
+<div type="button" class="callback-bt" data-phone="{{ variable('company_phone', '+380509910785') }}" data-route="{{ route('call.counter') }}">
     <div class="text-call">
         <i class="fa fa-phone"></i>
     </div>

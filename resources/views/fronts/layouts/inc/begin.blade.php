@@ -41,6 +41,7 @@
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:site_name" content="{{ variable('title') }}" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Vendor styles plugins -->
     <!-- build:css css/plugins.css -->

@@ -68,6 +68,7 @@ Route::group(['namespace' => 'Front'], function () {
     })->name('write.end');
     Route::get('node/{node}', 'NodeController@show')->name('node.show');
     Route::post('form', 'FormController@store')->name('form.store');
+    Route::post('call/count', 'HomeController@callCounter')->name('call.counter');
     Route::get('/{locale?}', 'HomeController@index')->name('home')->middleware('applyUrlLocaleToRootPage');
 });
 
