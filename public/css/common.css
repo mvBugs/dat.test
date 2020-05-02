@@ -3,7 +3,11 @@
 .callback-bt {
     background:#38a3fd;
     border:2px solid #38a3fd;
-    border-radius:50%;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    /*border-radius:50%;*/
     box-shadow:0 8px 10px rgba(56,163,253,0.3);
     cursor:pointer;
     height:68px;
@@ -21,7 +25,11 @@
 .callback-bt .text-call{
     height:68px;
     width:68px;
-    border-radius:50%;
+    /*border-radius:50%;*/
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
     position:relative;
     overflow:hidden;
 }
